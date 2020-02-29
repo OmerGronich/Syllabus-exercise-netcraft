@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300i,400,700&display=swap');
+
+:root {
+    --primary-color: rgba(127, 105, 202, 1);
+}
+
+/* Global */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+html,
+body {
+    font-size: 10px;
+    font-family: 'Libre Franklin', sans-serif;
+    line-height: 1.6;
+    background: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dark a {
+    color: #fff;
+}
+
+.primary {
+    color: var(--primary-color);
+}
+
+.grid-container {
+    position: relative;
+}
+
+#main-doc {
+    width: 80%;
+    margin-left: 15%;
+}
+
+.container {
+    width: 95%;
+    margin: 1.5rem auto;
+}
+
+.container .content {
+    width: 98%;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+}
+
+
+.container header {
+    font-size: 3rem;
+    word-spacing: .4rem;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 2.5rem auto 4rem auto;
+    font-size: 1.5rem;
+    min-width: 70rem;
+    width: 70%;
+    overflow: hidden;
+    border-left: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+}
+
+table thead tr {
+    background: var(--primary-color);
+    color: #ffffff;
+    text-align: left;
+    font-weight: 700;
+}
+
+table th,
+table td {
+    padding: 1.2rem 1.5rem;
+}
+
+table ul {
+    padding: 0 1.5rem;
+}
+
+table tbody tr {
+
+    border-bottom: 1px dashed var(--primary-color);
+}
+
+table tbody tr:last-child {
+    border-bottom: 3px solid var(--primary-color);
+
+}
+
+
+/* Main Header */
+
+#main-header {
+    display: -webkit-box;
+    display: flex;
+    background: #1c1a1a;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 6rem;
+    padding: 0 2rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 10;
+}
+
+#main-header .logo {
+    width: 29rem;
+    height: 4rem;
+    background: url('http://netcraftacademy.co.il/wp-content/themes/academy/images/logo_289x37.png') no-repeat center center / contain;
+    border: none;
+}
+
+#main-header .logo:hover {
+    opacity: .8;
+}
+
+#main-header h1 a{
+    color: #ffffff;
+}
+
+#main-header h1 a:hover {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 0.1rem;
+}
+
+/* Navbar */
+#navbar {
+    background: #f4f4f4;
+    border-right: 3px solid #1c1a1a;
+    min-height: 100vh;
+    height: 100%;
+    width: 15%;
+    text-align: center;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    line-height: 2;
+}
+
+#navbar header {
+    display: -webkit-box;
+    display: flex;
+    height: 7rem;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+#navbar header a {
+    color: #000;
+}
+#navbar header a:hover {
+    color: var(--primary-color);
+}
+
+#navbar li {
+    border-bottom: 1px solid #1c1a1a;
+    padding: 1rem 0;
+    list-style-type: none;
+}
+
+#navbar li:first-child {
+    border-top: 1px solid #1c1a1a;
+}
+#navbar li:last-child {
+    font-size: 1rem;
+    border-bottom: none;
+}
+
+#navbar .nav-link,
+#navbar .nav-link:visited {
+    color: #1c1a1a;
+}
+
+#navbar .nav-link:hover {
+    border-bottom: none;
+    color: var(--primary-color);
+}
+
+
+#navbar .current {
+    background: var(--primary-color);
+    position: relative;
+}
+
+#navbar .current .nav-link,
+#navbar .current a {
+    color: #fff;
+}
+
+
+/* netcraft_syllabus */
+
+#netcraft_syllabus .container .content h2 {
+    margin: 2rem 0 1rem 0;
+}
+
+#netcraft_syllabus .content ul {
+    margin: 0 0 2rem 3rem;
+}
+
+/* Final Steps*/
+
+#final_steps h2,
+#final_steps p{
+    margin-bottom: 2rem;
+}
+
+/*ICONS*/
+
+.html-icon {
+    color: #e54c20;
+}
+
+.css-icon {
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #0177bd) ,  to(#029be4));
+    background: linear-gradient(to right, #0177bd 50% ,  #029be4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.js-icon {
+    color: #d6ba32;
+}
+
+@media only screen and (max-width: 815px) {
+    .container header {
+        font-size: 2.5rem;
+        word-spacing: 0;
+    }
+
+    #navbar {
+        width: 100%;
+        min-height: 30rem;
+        max-height: 30rem;
+        overflow: scroll;
+        border: none;
+        border-bottom: 3px solid #1c1a1a;
+    }
+
+    #main-doc {
+        margin: 30rem auto 4rem auto;
+        width: 80%;
+        overflow-x: hidden;
+    }
+
+    table {
+        min-width: 90%;
+        margin: 4rem 0;
+    }
+}
